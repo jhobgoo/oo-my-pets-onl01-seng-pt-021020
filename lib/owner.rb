@@ -69,7 +69,7 @@ class Owner
   end
   
   def list_pets
-    pets = []
-    pets << cats.all + dogs.all
+    return "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+  end
   
 end
