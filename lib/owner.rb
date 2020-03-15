@@ -68,4 +68,8 @@ class Owner
     end
   end
   
+  def list_pets
+    pets = []
+    pets << cats.all + dogs.all
+  
 end
