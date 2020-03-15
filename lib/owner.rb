@@ -60,15 +60,12 @@ class Owner
   
   def sell_pets
     #combine cats and dogs into one group?
-    pets = cats 
-    self.cats.each do |cat|
-      cat.mood = "nervous"
+    pets = self.cats + self.dogs 
+    
+    pets.each do |pet|
+      pet.mood = "nervous"
+      pet.owner = nil
     end
-    self.dogs.each do |dog|
-      dog.mood = "nervous"
-    end
-    cats.owner = nil
-    dogs.owner = nil
   end
   
 end
